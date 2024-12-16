@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crypto Dashboard</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #121212;
+            color: white;
+        }
+
+        .container {
+            padding: 20px;
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .header h1 {
+            font-size: 24px;
+        }
+
+        .chart {
+            background: linear-gradient(180deg, #2a005e, #121212);
+            border-radius: 10px;
+            padding: 20px;
+            position: relative;
+        }
+
+        .chart h2 {
+            margin: 0;
+            font-size: 18px;
+        }
+
+        .chart p {
+            margin: 0;
+            font-size: 14px;
+        }
+
+        .chart .line {
+            width: 100%;
+            height: 150px;
+            background: url('graph-placeholder.png') no-repeat center;
+            background-size: contain;
+            margin: 20px 0;
+        }
+
+        .buttons {
+            display: flex;
+            justify-content: space-around;
+            margin-bottom: 20px;
+        }
+
+        .buttons button {
+            background-color: #3a3a3a;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            padding: 10px 20px;
+            cursor: pointer;
+        }
+
+        .buttons button:hover {
+            background-color: #555;
+        }
+
+        .watchlist {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 10px;
+        }
+
+        .watchlist .card {
+            background-color: #1c1c1c;
+            border-radius: 10px;
+            padding: 15px;
+            text-align: center;
+        }
+
+        .watchlist .card img {
+            width: 40px;
+            height: 40px;
+            margin-bottom: 10px;
+        }
+
+        .watchlist .card .name {
+            font-size: 16px;
+            font-weight: bold;
+        }
+
+        .watchlist .card .price {
+            font-size: 14px;
+        }
+
+        .staking {
+            margin-top: 20px;
+            padding: 20px;
+            background-color: #1c1c1c;
+            border-radius: 10px;
+        }
+
+        .staking h3 {
+            margin: 0 0 10px 0;
+        }
+
+        .staking p {
+            margin: 5px 0;
+        }
+		.section {
+            margin-bottom: 20px;
+            padding: 15px;
+            background-color: #2a2a3d;
+            border-radius: 10px;
+        }
+        .section h2 {
+            font-size: 18px;
+            margin: 0 0 10px 0;
+        }
+        .section p {
+            margin: 5px 0;
+            font-size: 14px;
+        }
+        .stats {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+        .stats .stat {
+            flex: 1;
+            min-width: 150px;
+            background-color: #3a3a4d;
+            padding: 10px;
+            border-radius: 5px;
+        }
+        .stat h3 {
+            font-size: 16px;
+            margin: 0 0 5px 0;
+        }
+		.stat p {
+            font-size: 14px;
+            margin: 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+       <div class="header">
+            <h1>Solana</h1>
+            <span class="percentage">-2.65% ($6.16)</span>
+        </div>
+        <div class="chart">
+            <img src="diag2.jpg" alt="Price Chart" width="400" height="200" align center>
+        </div>
+
+        <!-- Buttons -->
+        <div class="buttons">
+            <button>Buy</button>
+            <button>Sell</button>
+            <button>Deposit</button>
+            <button>More</button>
+        </div>
+		
+		<div class="section">
+            <h2>Rewards</h2>
+            <p>Lifetime SOL Earnings: $81.88</p>
+            <p>Next Payout: 1 day</p>
+            <button>Go to Rewards</button>
+        </div>
+        <div class="section">
+            <h2>Portfolio Value</h2>
+            <p>+22.56%</p>
+            <button>View More</button>
+        </div>
+
+        <!-- Watchlist -->
+        <div class="watchlist">
+            <div class="card">
+                <img src="btc.png" alt="BTC">
+                <div class="name">BTC</div>
+                <div class="price">$100,241.10</div>
+            </div>
+
+            <div class="card">
+                <img src="eth.png" alt="ETH">
+                <div class="name">ETH</div>
+                <div class="price">$3,898.90</div>
+            </div>
+
+            <div class="card">
+                <img src="dot.png" alt="DOT">
+                <div class="name">DOT</div>
+                <div class="price">$8.97</div>
+            </div>
+
+            <div class="card">
+                <img src="sol.png" alt="SOL">
+                <div class="name">SOL</div>
+                <div class="price">$226.15</div>
+            </div>
+
+            <div class="card">
+                <img src="ada.jpg" alt="ADA">
+                <div class="name">ADA</div>
+                <div class="price">$1.10</div>
+            </div>
+
+            <div class="card">
+                <img src="ksm.png" alt="KSM">
+                <div class="name">KSM</div>
+                <div class="price">$38.71</div>
+            </div>
+        </div>
+
+        <!-- Staking Section -->
+        <div class="staking">
+            <h3>Staking Details</h3>
+            <p>Total Balance: Hidden</p>
+            <p>Bonded APR: 20.7%</p>
+            <p>Flexible APR: 3-7%</p>
+            <p>Lifetime SOL Earnings: $81.88</p>
+            <p>Next Payout: 1 day</p>
+        </div>
+		<div class="section">
+            <h2>About Solana</h2>
+            <div class="stats">
+                <div class="stat">
+                    <h3>Market Rank</h3>
+                    <p>#5</p>
+                </div>
+                <div class="stat">
+                    <h3>Market Cap</h3>
+                    <p>$108,261,972,284</p>
+                </div>
+                <div class="stat">
+                    <h3>24H Volume</h3>
+                    <p>$6,054,255,891</p>
+                </div>
+                <div class="stat">
+                    <h3>Circulating Supply</h3>
+                    <p>479M</p>
+                </div>
+                <div class="stat">
+                    <h3>All-Time High</h3>
+                    <p>$264.45 (Nov 2024)</p>
+                </div>
+            </div>
+        </div>
+        <div class="section">
+            <h2>Recent Transactions</h2>
+            <p>Sunday, December 8, 2024 - Reward - 7:34 AM</p>
+            <p>Saturday, December 7, 2024 - Reward - 10:50 PM</p>
+            <p>Friday, December 6, 2024 - Reward - 8:31 PM</p>
+        </div>
+    </div>
+</body>
+</html>
